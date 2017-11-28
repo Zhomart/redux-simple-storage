@@ -32,17 +32,17 @@ export const clone = item => {
 export const merge = (target, perdifier) => {
   throw `doesn't work`
   if (isObject(perdifier)) {
-    const runner = (target, perdifier) => {
+    const walker = (target, perdifier) => {
       return Object.keys(perdifier).reduce((accum, key) => {
         if (isObject(perdifier[key]) && isObject(target[key])) {
           accum[key] = perdifier[key];
         } else if (perdifier[key] !== undefined) {
-          accum[key] = runner(target[key], perdifier[key]);
+          accum[key] = walker(target[key], perdifier[key]);
         }
         return accum;
       }, target);
     };
-    return runner(clone(target), perdifier);
+    return walker(clone(target), perdifier);
   }
   return clone(target);
 };
