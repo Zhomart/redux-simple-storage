@@ -1,6 +1,6 @@
 
 {
-  "name": "redux-simple-storage",
+  "name": "redux-global-storage",
   "version": "3.2.1",
   "description": "Local state storage for javascript apps",
   "main": "index.js",
@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Zhomart/redux-simple-storage.git"
+    "url": "git+https://github.com/Zhomart/redux-global-storage.git"
   },
   "keywords": ["state", "storage"],
   "author": "Zhomart Mukhamejanov",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Zhomart/redux-simple-storage/issues"
+    "url": "https://github.com/Zhomart/redux-global-storage/issues"
   },
-  "homepage": "https://github.com/Zhomart/redux-simple-storage#readme",
+  "homepage": "https://github.com/Zhomart/redux-global-storage#readme",
   "dependencies": {},
   "devDependencies": {
     "babel-core": "^6.24.1",

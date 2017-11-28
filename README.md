@@ -1,18 +1,18 @@
-# Redux Simple Storage
+# Redux Global Storage
 
-Redux Simple Storage is a tiny state container written in es6.
+Redux Global Storage is a tiny state container written in es6.
 
 It is based on [Redux](https://github.com/reactjs/redux), but has no reducers and actions.
 You can also have as many storage units as you want.
 
-Install with `npm install --save redux-simple-storage` or `yarn add redux-simple-storage`.
+Install with `npm install --save redux-global-storage` or `yarn add redux-global-storage`.
 
 
 ## Usage
 
 ```javascript
-import ObjectStateStorage from 'redux-simple-storage';
-import { merge, clone } from 'redux-simple-storage';
+import ObjectStateStorage from 'redux-global-storage';
+import { merge, clone } from 'redux-global-storage';
 
 // create a storage unit with initial value { foo: 'bar' }
 const store = new ObjectStateStorage({ foo: 'bar' });
