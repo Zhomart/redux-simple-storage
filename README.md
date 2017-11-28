@@ -67,7 +67,7 @@ console.log(cloneResult);
 
 ## Disclaimer
 
-Don't use this package in your projects. It's still work in progress. I'm not responsible for anything happens to you, your project or anyone/anything else if you use this package. I warned you.
+Don't use this package in your projects. It's still work in progress. I'm not responsible for anything happens to you, your project or anyone/anything else if you use this package. I warned you. Seriously!
 
 
 ## Maintainers

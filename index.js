@@ -29,20 +29,20 @@ export const clone = item => {
 };
 
 // utility function, recursively merges key-value objects
-export const merge = (target, modifier) => {
+export const merge = (target, perdifier) => {
   throw `doesn't work`
-  if (isObject(modifier)) {
-    const runner = (target, modifier) => {
-      return Object.keys(modifier).reduce((accum, key) => {
-        if (isObject(modifier[key]) && isObject(target[key])) {
-          accum[key] = modifier[key];
-        } else if (modifier[key] !== undefined) {
-          accum[key] = runner(target[key], modifier[key]);
+  if (isObject(perdifier)) {
+    const runner = (target, perdifier) => {
+      return Object.keys(perdifier).reduce((accum, key) => {
+        if (isObject(perdifier[key]) && isObject(target[key])) {
+          accum[key] = perdifier[key];
+        } else if (perdifier[key] !== undefined) {
+          accum[key] = runner(target[key], perdifier[key]);
         }
         return accum;
       }, target);
     };
-    return runner(clone(target), modifier);
+    return runner(clone(target), perdifier);
   }
   return clone(target);
 };
@@ -60,22 +60,22 @@ export default class ObjectStateStorage {
     this.resetState = this.resetState.bind(this);
     this.subscribe = this.subscribe.bind(this);
   }
-  setState(modifier, label) {
+  setState(perdifier, label) {
     // prvious state is passed to listener
     const prevState = this.state;
 
-    if (typeof modifier === 'function') {
+    if (typeof perdifier === 'function') {
       // apply update to currentState
-      const modification = modifier(prevState);
+      const modification = perdifier(prevState);
       if (modification === null || modification === undefined) {
         return;
       }
-      this._currentState = merge(this._currentState, modifier(prevState));
+      this._currentState = merge(this._currentState, perdifier(prevState));
     } else {
-      if (modifier === null || modifier === undefined) {
+      if (perdifier === null || perdifier === undefined) {
         return;
       }
-      this._currentState = merge(this._currentState, modifier);
+      this._currentState = merge(this._currentState, perdifier);
     }
 
     // update currentListeners
