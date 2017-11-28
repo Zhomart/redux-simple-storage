@@ -35,9 +35,9 @@ export const merge = (target, modifier) => {
     const runner = (target, modifier) => {
       return Object.keys(modifier).reduce((accum, key) => {
         if (isObject(modifier[key]) && isObject(target[key])) {
-          accum[key] = runner(target[key], modifier[key]);
-        } else if (modifier[key] !== undefined) {
           accum[key] = modifier[key];
+        } else if (modifier[key] !== undefined) {
+          accum[key] = runner(target[key], modifier[key]);
         }
         return accum;
       }, target);
