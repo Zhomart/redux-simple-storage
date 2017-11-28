@@ -1,0 +1,30 @@
+
+{
+  "name": "redux-simple-storage",
+  "version": "1.2.0",
+  "description": "Local state storage for javascript apps",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --config jest.config.js --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zhomart/redux-simple-storage.git"
+  },
+  "keywords": ["state", "storage"],
+  "author": "Zhomart Mukhamejanov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Zhomart/redux-simple-storage/issues"
+  },
+  "homepage": "https://github.com/Zhomart/redux-simple-storage#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "eslint": "^3.19.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^5.0.3",
+    "eslint-plugin-react": "^7.0.1",
+    "jest": "^20.0.3"
+  }
+}
